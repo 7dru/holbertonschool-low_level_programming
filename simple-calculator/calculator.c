@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point for simple calculator with addition implementation
+ * main - Entry point for simple calculator with addition and subtraction
  *
  * Return: Always 0.
  */
@@ -40,7 +40,17 @@ int main(void)
 				break;
 			printf("Result: %d\n", a + b);
 		}
-		else if (choice >= 2 && choice <= 4)
+		else if (choice == 2)
+		{
+			printf("A: ");
+			if (scanf("%d", &a) != 1)
+				break;
+			printf("B: ");
+			if (scanf("%d", &b) != 1)
+				break;
+			printf("Result: %d\n", a - b);
+		}
+		else if (choice >= 3 && choice <= 4)
 		{
 			/* Other operations will be added later */
 		}
